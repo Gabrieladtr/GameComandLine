@@ -7,6 +7,9 @@
 
 //Ok, bora começar a codar.
 
+//v2: Pensando bem, vou utilizar esse menu para construir alguns jogos por linha de comando.
+//E atraves do menu pretendo conseguir armazenar esses games e a pontuacao.
+
 using System;
 using FuncoesDoMenu;
 
@@ -22,6 +25,22 @@ namespace HelloWorldV2
             bool executando = true;
             string entrada = "teste";
             
+            int screenWidth = Console.WindowWidth;
+
+            Console.WriteLine("Carregando sistema...");
+            for (int i = 0; i < screenWidth - 5; i++) // -5 para evitar que saia da tela
+            {
+                Console.Clear(); // Limpa a tela a cada iteração
+                Console.SetCursorPosition(i, Console.WindowHeight / 2); // Define a posição do objeto
+                Console.Write("Loading"); // Representação do objeto
+
+                Thread.Sleep(100); // Aguarda um curto período de tempo para criar a ilusão de movimento
+            }
+
+            Console.Clear();
+            Console.WriteLine("Sistema carregado!");
+
+
             Console.WriteLine("Estamos entrando no looping While...");
             MostrarMenu();
             while(executando)

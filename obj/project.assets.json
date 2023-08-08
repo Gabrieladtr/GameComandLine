@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Punk Rockers Systems\\HelloWorld V2\\HelloWorld V2.csproj",
+      "projectUniqueName": "C:\\Punk Rockers Systems\\HelloWorld V2\\GameComandLine\\HelloWorld V2.csproj",
       "projectName": "HelloWorld V2",
-      "projectPath": "C:\\Punk Rockers Systems\\HelloWorld V2\\HelloWorld V2.csproj",
+      "projectPath": "C:\\Punk Rockers Systems\\HelloWorld V2\\GameComandLine\\HelloWorld V2.csproj",
       "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-      "outputPath": "C:\\Punk Rockers Systems\\HelloWorld V2\\obj\\",
+      "outputPath": "C:\\Punk Rockers Systems\\HelloWorld V2\\GameComandLine\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config"

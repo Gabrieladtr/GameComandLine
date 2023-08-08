@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/p3jEyqnPgyrdwPtZWaOUPyXXW3bdv9CYstHqkGTs9j8i9SoRb4RIUVDpH7XwHbQ+znhUtbgW+kcMwXAy+B1nA==",
+  "dgSpecHash": "KzoRipj8GervxkMWbqR8dqZC4Ag/Q7WkRgZU9JnvD7jzq+iRBawzDu0ITXA71nrzMB29p8GWGW0po1XN49s/0w==",
   "success": true,
-  "projectFilePath": "C:\\Punk Rockers Systems\\HelloWorld V2\\HelloWorld V2.csproj",
+  "projectFilePath": "C:\\Punk Rockers Systems\\HelloWorld V2\\GameComandLine\\HelloWorld V2.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
