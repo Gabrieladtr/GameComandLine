@@ -56,9 +56,39 @@ como a de mostrar as cartas do outro player e criar uma IA que consegue competir
 
 E por ultimo vou criar o sistema de apostas kkkk 
 
+------------------------------
+
+Hey estarei gravando o meu progresso criando um sisteminha simples
+com o joguinho blackjack. Ele já está funcionando mas quero terminar algumas ações 
+como:
+
+1- a vez do player 2 (computador)
+2 - dobrar a aposta, comprar a última carta e passar a vez
+3 - Sistema de apostas
+
+Só isso. Pretendo fazer td isso ainda hj.
+Bora começar.
+
+KKKKKKKK
+
+
+Aiaiaiaiaiaiaiaiaia eu to ficando bobo da minha cabeça hein pqp
+
+Vei... sla, acho que me perdi na minha propria logica kkkk
+
+-------------------------
+
+Menuzinho 2 nao ta funfando;
+O jogo nao ta mostrando os dados das cartas em alguns cenarios, como a carta oculta
 
 
 
+--------------------------------------
+
+O jogo esta funcionando bem. 
+Mas o player 2 simplesmente so compra uma carta e nao tenta ganhar do player 1
+Entao eu so consigo perder se eu jogar um valor pequeno, tipo menos de 13. Pq ai o player 2
+consegue revidar ganhando.
 
 
 
