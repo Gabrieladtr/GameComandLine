@@ -7,7 +7,7 @@ namespace BlackJackGame
 
         public static void PlayBlackJack()
         {
-            bool executando = true, executandoComprarCartas = true;
+            bool executando = true, player1Comprando = true;
             int carta1PlayerDois, carta2PlayerDois, somaPlayerDois, newCardPlayerDois = 0;
             int carta1PlayerUm, carta2PlayerUm, somaPlayerUm, newCardPlayerUm;
             Random random = new Random();
@@ -46,7 +46,7 @@ namespace BlackJackGame
                 
 
 
-                while(executandoComprarCartas == true)
+                while(player1Comprando == true)
                 {
                     
                     
@@ -81,7 +81,7 @@ namespace BlackJackGame
 
 
                                         Console.WriteLine("Finalizando o jogo.");
-                                        executandoComprarCartas = false;
+                                        player1Comprando = false;
                                         executando = false;
                                         //Vai finalizar o game
 
@@ -89,12 +89,12 @@ namespace BlackJackGame
                                     {
                                         if(somaPlayerDois < somaPlayerUm)
                                         {
-                                            Console.WriteLine("Vc tem 21. Vc ganhou!");
+                                            Console.WriteLine("Blackjack! Vc tem 21. Vc ganhou!");
                                             
                                         }
                                         
                                         Console.WriteLine("Finalizando o jogo.");
-                                        executandoComprarCartas = false;
+                                        player1Comprando = false;
                                         executando = false;
                                         //Vai finalizar o game
                                         
@@ -113,31 +113,76 @@ namespace BlackJackGame
                             //com mais pontos do que ele e tmb nao ultrapassar o 21.
                             //ou seja somaPlayerUm <= 21 && somaPlayerDois <= 21
                             //E tenta criar o melhor deck possível.
+
                             Console.WriteLine("Voce desistiu. Agora é a vez do player 2.");
                             Console.WriteLine("");
                             
 
                             
-                            while(player2Comprando)
+                            while(somaPlayerDois <= 21 && player2Comprando == true)
                             {
-                                
                                     //vai comprar mais uma carta
+                                    newCardPlayerDois = random.Next(1,11);//Vai gerar a nova carta da rodada
+                                    somaPlayerDois = (somaPlayerDois + newCardPlayerDois);//Vai armanezar todas as cartas anteriores
+                                    Console.WriteLine("Jogador 2 | Carta um: " + carta1PlayerDois + " | Carta dois: " + carta2PlayerDois + " | Nova carta: " + newCardPlayerDois + " | Total: " + somaPlayerDois);
+                                    Console.WriteLine("");
                                     
-                                    if(somaPlayerDois <= 11)
+                                    if(somaPlayerDois >= 20 && somaPlayerDois <= 21)//Vai parar de comprar cartas quando se chegar nesse limite
                                     {
-                                        if(somaPlayerUm > somaPlayerDois)
-                                        {
-                                            newCardPlayerDois = random.Next(1,11);//Vai gerar a nova carta da rodada
-                                            somaPlayerDois = (somaPlayerDois + newCardPlayerDois);//Vai armanezar todas as cartas anteriores
-                                            Console.WriteLine("Jogador 2 | Carta um: " + carta1PlayerDois + " | Carta dois: " + carta2PlayerDois + " | Nova carta: " + newCardPlayerDois + " | Total: " + somaPlayerDois);
-                                            Console.WriteLine("");
-                                        }else
-                                        {
-                                            //provavelmente estamos ganhando, entao paramos por aqui.
-                                            player2Comprando = false;
-                                        }
+                                        //vai parar de comprar cartas
+                                        Console.WriteLine("");
+                                        Console.WriteLine("Finalizando o jogo.");
+                                        player2Comprando = false;
+                                        player1Comprando = false;
+                                        executando = false;
+                                        //Vai finalizar o game
 
-                                    }else if(somaPlayerDois >=12 && somaPlayerDois <=16)
+                                    }else if(somaPlayerDois > 21)//Vai parar de comprar cartas caso estrapole o limite de 21
+                                    {
+     
+                                        //vai parar de comprar cartas
+                                        Console.WriteLine("");
+                                        Console.WriteLine("Finalizando o jogo.");
+                                        player2Comprando = false;
+                                        player1Comprando = false;
+                                        executando = false;
+                                        //Vai finalizar o game
+                                    }
+
+                                    if(somaPlayerDois > somaPlayerUm && somaPlayerDois < 22)//Vai definir se o player 2 ganhou do player 1 se ele for maior do que o player 1 e menor ou igual a 21
+                                    {
+                                        Console.WriteLine("Player 2 ganhou.");
+                                        //vai parar de comprar cartas
+                                        Console.WriteLine("");
+                                        Console.WriteLine("Finalizando o jogo.");
+                                        player2Comprando = false;
+                                        player1Comprando = false;
+                                        executando = false;
+                                        //Vai finalizar o game
+                                    }else if(somaPlayerDois < somaPlayerUm && somaPlayerUm <= 21) //Vai dizer se o player 1 ganhou ou nao
+                                    {
+                                        Console.WriteLine("Vc ganhou.");
+                                        //vai parar de comprar cartas
+                                        Console.WriteLine("");
+                                        Console.WriteLine("Finalizando o jogo.");
+                                        player2Comprando = false;
+                                        player1Comprando = false;
+                                        executando = false;
+                                        //Vai finalizar o game
+                                    }else if(somaPlayerDois == somaPlayerUm)//Vai definir quando ha empate
+                                    {
+                                        Console.WriteLine("Empate");
+                                        //vai parar de comprar cartas
+                                        Console.WriteLine("");
+                                        Console.WriteLine("Finalizando o jogo.");
+                                        player2Comprando = false;
+                                        player1Comprando = false;
+                                        executando = false;
+                                        //Vai finalizar o game
+                                    }
+
+                                    /*
+                                    else if(somaPlayerDois >=12 && somaPlayerDois <=16)
                                     {
                                         if(somaPlayerUm > somaPlayerDois)
                                         {
@@ -178,7 +223,7 @@ namespace BlackJackGame
                                         Console.WriteLine("O jogador 2 estourou o deck. Voce ganhou.");
                                         player2Comprando = false;
                                         Console.WriteLine("Finalizando o jogo.");
-                                        executandoComprarCartas = false;
+                                        player1Comprando = false;
                                         executando = false;
                                         //Vai finalizar o game
                                     }
@@ -189,7 +234,7 @@ namespace BlackJackGame
                                             Console.WriteLine("Empate!");
                                             player2Comprando = false;
                                             Console.WriteLine("Finalizando o jogo.");
-                                            executandoComprarCartas = false;
+                                            player1Comprando = false;
                                             executando = false;
                                             //Vai finalizar o game
                                         } 
@@ -202,7 +247,7 @@ namespace BlackJackGame
                                         
                                         player2Comprando = false;
                                         Console.WriteLine("Finalizando o jogo.");
-                                        executandoComprarCartas = false;
+                                        player1Comprando = false;
                                         executando = false;
                                         //Vai finalizar o game
 
@@ -211,11 +256,11 @@ namespace BlackJackGame
                                         Console.WriteLine("Player 1 ganhou!");
                                         player2Comprando = false;
                                         Console.WriteLine("Finalizando o jogo.");
-                                        executandoComprarCartas = false;
+                                        player1Comprando = false;
                                         executando = false;
                                         //Vai finalizar o game
                                     }
-
+                                        */
 
                                     
                             }
@@ -224,6 +269,7 @@ namespace BlackJackGame
                         break;
                         case "3":
                             Console.WriteLine("Estamos em 3");
+                            Console.WriteLine("Esta opcao esta em construcao");
                         break;
                         default:
                             Console.WriteLine("Valor nao encontrado.");

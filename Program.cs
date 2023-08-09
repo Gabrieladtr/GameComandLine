@@ -25,21 +25,8 @@ namespace HelloWorldV2
             bool executando = true;
             string entrada = "teste";
             
-            int screenWidth = Console.WindowWidth;
-
-            Console.WriteLine("Carregando sistema...");
-            for (int i = 0; i < screenWidth - 5; i++) // -5 para evitar que saia da tela
-            {
-                Console.Clear(); // Limpa a tela a cada iteração
-                Console.SetCursorPosition(i, Console.WindowHeight / 2); // Define a posição do objeto
-                Console.Write("Loading"); // Representação do objeto
-
-                Thread.Sleep(100); // Aguarda um curto período de tempo para criar a ilusão de movimento
-            }
-
-            Console.Clear();
-            Console.WriteLine("Sistema carregado!");
-
+            
+            //CarregarAnimacao();
 
             Console.WriteLine("Estamos entrando no looping While...");
             MostrarMenu();
@@ -108,6 +95,26 @@ namespace HelloWorldV2
             Console.WriteLine("2 - Configuracoes");
             Console.WriteLine("3 - Sair do jogo");
             Console.WriteLine("Escolha um numero valido a seguir:");
+           
+
+        }
+
+        public static void CarregarAnimacao()
+        {
+            int screenWidth = Console.WindowWidth;
+
+            Console.WriteLine("Carregando sistema...");
+            for (int i = 0; i < screenWidth - 5; i++) // -5 para evitar que saia da tela
+            {
+                Console.Clear(); // Limpa a tela a cada iteração
+                Console.SetCursorPosition(i, Console.WindowHeight / 2); // Define a posição do objeto
+                Console.Write("Loading"); // Representação do objeto
+
+                Thread.Sleep(100); // Aguarda um curto período de tempo para criar a ilusão de movimento
+            }
+
+            Console.Clear();
+            Console.WriteLine("Sistema carregado!");
            
 
         }

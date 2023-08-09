@@ -90,6 +90,25 @@ Mas o player 2 simplesmente so compra uma carta e nao tenta ganhar do player 1
 Entao eu so consigo perder se eu jogar um valor pequeno, tipo menos de 13. Pq ai o player 2
 consegue revidar ganhando.
 
+Vou ter que refazer a lógica, pra melhorar ela.
+
+Agora o player 2 está comprando cartas até quando nao precisa.
+
+Mas o mais importante ele esta fazendo que é comprar cartas. Mas quero agora que ele identifique
+possiveis cenarios onde nao sera necessario comprar cartas, como se o player 1 estiver com menos pontos.
+
+---------------------------
+
+
+Depois de umas 6 horas de programação eu creio que tenha finalizado o jogo kkkk
+
+Eu trabalhei bastante no equilibrio do jogo, pra que o player 2 nao estoure o deck e que ele consiga se defender.
+
+Entao deu bastante trabalho a logica pra conseguir fazer todas essas coisinhas...
+
+Mas deu certo e agora vou testar no cmd
+
+
 
 
 
